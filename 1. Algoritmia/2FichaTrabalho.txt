@@ -1,0 +1,174 @@
+//1
+inicio
+escrever("Introduza um número inteiro: ")
+ler(n)
+
+resultado = 0
+i = 1
+
+enquanto (i <= n) faz
+	resultado = resultado + i
+	i = i + 1
+
+escrever("O resultado das somas sucessivas dos inteiros até ", n, " é ", resultado)
+fim
+
+//2
+inicio
+escrever("Introduza um número inteiro positivo: ")
+ler(n)
+
+i = 1
+
+enquanto (i <= n) faz
+	se (n % i == 0) então
+		escrever(i)
+	i = i + 1
+fim
+
+//3
+inicio
+escrever("Introduza um número inteiro positivo: ")
+ler(n)
+
+n_divisores = 0
+i = 1
+
+enquanto (i <= n) faz
+	se (n % i == 0)
+		n_divisores = n_divisores + 1
+		i = i + 1
+se (n_divisores == 2) então
+	escrever("O número ", n, " é primo.")
+senão
+	escrever("O número ", n, " não é primo.")
+fim
+
+//4
+inicio
+escrever("Introduza um número inteiro positivo: ")
+ler(n)
+
+resultado = 0
+i = 1
+
+enquanto (i <= n) faz
+	se (n % i == 0) então
+		resultado = resultado + i
+		i = i + 1
+escrever("A soma dos divisores de ", n, " é: ", resultado)
+fim
+
+//5
+inicio
+escrever("Introduza um número inteiro positivo e menor que 50: ")
+ler(n)
+
+resultado = 1
+i = 1
+
+enquanto (i <= n) faz
+	resultado = resultado * i
+	i = i + 1
+escrever("O factorial de ", n, " é: ", resultado)
+fim
+
+//6
+inicio
+escrever("Introduza um número inteiro maior que 1: ")
+ler(n)
+
+resultado = 0
+i = 1
+
+enquanto (i < n) faz
+	se (n % i == 0)
+		resultado = resultado + i
+		i = i + 1
+se (resultado == n) então
+	escrever("O número ", n, " é um número perfeito")
+senão
+	escrever("O número ", n, " não é um número perfeito")
+fim
+
+
+//7
+inicio
+escrever("Introduza um número inteiro positivo: ")
+ler(n)
+
+variable = n
+divider = 10
+result = 0
+
+enquanto (variable != 0) faz
+	se (variable / divider > 0) então
+		divider *= 10
+	então
+		//escrever(variable * 10 // divider)
+		result = result + variable * 10 // divider
+		variable = variable - (variable * 10 // divider) * divider // 10
+		divider = 10
+escrever(result)
+
+//7 alternativa
+inicio
+escrever("Introduza um número inteiro positivo: ")
+ler(n)
+
+resultado = 0
+
+enquanto n != 0
+	digito = n % 10
+	n = n /10
+	resultado = resultado + digito
+		
+escrever(resultado)
+
+
+
+//8
+inicio
+escrever("Introduza um número inteiro maior ou igual a 2: ")
+ler(n)
+
+decomposto = n
+prod_primos = 1
+i = 2
+
+enquanto (prod_primos != n) faz
+	se (decomposto % i == 0) então
+		prod_primos = prod_primos * i
+		decomposto = decomposto / i
+		escrever(i)
+		i = 2
+	senão
+		i = i + 1
+fim
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,191 @@
+//1
+inicio
+escrever("Introduza o nome e a idade: ")
+ler(nome, idade)
+escrever("O seu nome é ", nome, " e tem ", idade, " anos de idade!")
+fim
+
+
+//2
+inicio
+escrever("Introduza dois valores A e B: ")
+ler(a, b)
+temp1 = a
+temp2 = b
+a = temp2
+b = temp1
+fim
+
+
+//3
+inicio
+escrever("Introduza 3 valores inteiros: ")
+ler(a, b, c)
+##a
+escrever("A soma dos seus quadrados é ", a^2 + b^2 + c^2)
+##b
+escrever("O quadrado da soma é ", (a + b + c)^2)
+##c
+escrever("A média aritmética é ", (a + b + c) / 3 )
+fim
+
+//4
+inicio
+escrever("Introduza a sua altura e sexo (m/f): ")
+ler(h, sexo)
+se (sexo == m) entao
+	escrever("O peso ideal para uma pessoa do sexo masculino e de altura ", altura, " é de: ", (72.7*h) - 58)
+senão
+	escrever("O peso ideal para uma pessoa do sexo feminino e de altura ", altura, " é de: ", (62.1*h) - 44.7)
+fim
+
+
+//5
+inicio
+escrever("Introduza 2 valores: ")
+ler(a, b)
+enquanto (b==0) faz
+	escrever("O segundo valor introduzido foi zero.")
+	escrever("Introduza um valor diferente de zero: ")
+	ler b
+
+escrever("O quociente dos 2 valores é ", a/b)
+escrever("O resto da divisão entre os 2 valores é ", a%b)
+fim
+
+
+//6
+inicio
+escrever("Introduza as 3 notas parciais do aluno: ")
+ler(a, b, c)
+media = (a + b + c) / 3
+se (media >= 10) então
+	escrever("Aprovado")
+senão se (media < 8) então
+	escrever("Reprovado")
+senão
+	escrever("Sujeito a recuperação")
+fim
+
+
+//7
+inicio
+escrever("Introduza uma medida em metros: ")
+ler(medida)
+
+escrever("Conversões da medida nos seus multiplos:")
+escrever(medida/1000, " km")
+escrever(medida/100, " hm")
+escrever(medida/10, " dam")
+escrever(medida*10, " dm")
+escrever(medida*100, " cm")
+escrever(medida*1000, " mm")
+fim
+
+
+//8
+inicio
+escrever("Introduza um número inteiro positivo: ")
+ler(n)
+
+enquanto (n >= 0) faz
+	escrever(n)
+	n = n - 1
+fim
+
+
+//9
+inicio
+escrever("Introduza 2 números inteiros positivos: ")
+ler(a, b)
+
+resultado = 0
+i = a
+
+enquanto (i <= b) faz
+	resultado = resultado + i
+	i = i + 1
+escrever("A soma dos elementos entre os 2 números é: ", resultado)
+fim
+
+
+//10
+inicio
+escrever("Introduza as 5 notas finais de avaliação do aluno: ")
+ler(a, b, c, d, e)
+media = (a + b + c + d + e) / 5
+se (media <= 10) então
+	escrever("Mau")
+senão se (media > 17) então
+	escrever("Muito bom")
+senão
+	escrever("Bom")
+fim
+
+
+//11
+inicio
+escrever("Introduza um valor: ")
+ler(n)
+
+i = 1
+enquanto (i <= 50) faz
+	escrever(n, " x ", i, " = ", n * i)
+	i = i + 1
+fim
+
+
+//12
+inicio
+escrever("Introduza um número inteiro positivo: ")
+ler(n)
+
+resultado = 0
+i = 1
+
+enquanto (i < n) faz
+	se (n % i == 0) então
+		resultado = resultado + i
+		i = i + 1
+se (resultado == n) então
+	escrever("O número ", n, " é um número perfeito")
+senão
+	escrever("O número ", n, " não é um número perfeito")
+fim
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

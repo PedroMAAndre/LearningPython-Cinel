@@ -1,0 +1,405 @@
+//1.
+inicio
+escrever("Introduza o seu nome: ")
+ler(nome)
+escrever("O nome inserido foi ", nome)
+fim
+
+//2.
+inicio
+escrever("Insira o seu nome e de seguida a sua idade: ")
+ler(nome, idade)
+escrever("O seu nome é ", nome, " e tem ", idade, " anos de idade!")
+fim
+
+//3
+inicio
+escrever("Insira 2 valores inteiros: ")
+ler(valor1, valor2)
+//3.a
+escrever(valor1 + valor2)
+//3.b
+escrever(valor1 - valor2)
+//3.c
+escrever(valor1 * valor2)
+//3.d
+escrever(valor1 / valor2)
+escrever(valor1 % valor2)
+fim
+
+//4
+//4a | a=-5  -> -5	| b=3  -> 3
+//4b | a=0	 -> 0 	| b=10 -> 10	
+//4c | a=1/2 ->	0	| b=23 -> 23
+
+//5
+inicio
+escrever("Introduza o seu nome: ")
+ler(nome)
+escrever("Introduza o seu ano de nascimento: ")
+ler(ano_nascimento)
+idade = 2020 - ano_nascimento
+escrever("A sua idade aproximada é de ", idade)
+fim
+
+//6
+inicio
+escrever("Introduzir o código do produto: ")
+ler(codigo_produto)
+escrever("Introduzir a quantidade: ")
+ler(quantidade)
+se (codigo_produto == 101)
+	preco = 0.25
+senão se (codigo_produto == 102)
+	preco = 0.35
+senão se (codigo_produto == 103)
+	preco = 0.25
+senão se (codigo_produto == 104)
+	preco = 0.40
+senão se (codigo_produto == 105)
+	preco = 1.10
+	
+total = quantidade * preco
+escrever("O total é: ", total)
+fim
+
+//7
+x=11	y=22
+Instruções		x		y		t
+x=x;			11		22
+x=y;			22		22
+x=0;			0		22
+x=x+1;			1		22
+x=y*2;			44		22
+y=x/2+1;		44		23
+x=y; y=x;		23		23
+y=x; x=y;		23		23
+t=x; x=y; y=t;	23		23		23
+t=y; x=y; y=t;	23		23		23
+
+//8
+inicio
+escrever("Introduza um número inteiro: ")
+ler(valor)
+se (valor % 2 == 0) então
+	//par
+	valor = valor / 2
+senão
+	//impar
+	valor = valor * 3 + 1
+escrever(valor)
+fim
+
+//9
+inicio
+escrever("Insira o valor do diâmetro da circunferência")
+ler(diametro)
+area = 3.14 * (diametro / 2)^2
+escrever("A área da circunferência é: ", area)
+fim
+
+//10
+inicio
+escrever("Indique o diâmetro da roda da bicicleta (cm): ")
+ler(diametro)
+escrever("Indique o número de quilómetros que andou (km): ")
+ler(distancia)
+perimetro = 2 * 3.14 * (diametro / 2) / 100000 //convertido em km
+voltas = distancia / perimetro
+escrever("A roda da bicicleta deu ", voltas)
+fim
+
+//11
+inicio
+escrever("Introduza a temperatura em ºC: ")
+ler(temperatura_c)
+temperatura_f = (9 * temperatura_c + 160) / 5
+escrever("A temperatura em ºF é: ", temperatura_f)
+fim
+
+//12
+inicio
+escrever("Introduza a temperatura em ºF: ")
+ler(temperatura_f)
+temperatura_c = (temperatura_f - 32) *(5 / 9)
+escrever("A temperatura em ºC é: ", temperatura_c)
+fim
+
+//13
+inicio
+escrever("Introduza 3 valores inteiros: ")
+ler(valor1, valor2, valor3)
+
+//13a
+resultado1 = valor1^2 + valor2^2 + valor3^2
+escrever("A soma dos seus quadrados é: ", resultado1)
+
+//13b
+resultado2 = (valor1 + valor2 + valor3)^2
+escrever("O quadrado da soma é: ", resultado2)
+
+//13c
+resultado3 = (valor1 + valor2 + valor3) / 3
+escrever("A sua média aritmética é: ", resultado3)
+fim
+
+//14
+inicio
+escrever("Introduza a quantidade de escudos: ")
+ler(escudos)
+euros = escudos / 200.482
+escrever("A quantia de ", escudos, "$ corresponde a ", euros, " €")
+fim
+
+//15
+inicio
+escrever("Indique o número da semana (1-7): ")
+ler(n_semana)
+se (n_semana < 1 or n_semana > 7)
+	escrever("Valor inválido (1-7)")
+	fim
+senão se (n_semana == 1) então
+	dia = "Domingo"
+senão se (n_semana == 2) então
+	dia = "Segunda"
+senão se (n_semana == 3) então
+	dia = "Terça"
+senão se (n_semana == 4) então
+	dia = "Quarta"
+senão se (n_semana == 5) então
+	dia = "Quinta"
+senão se (n_semana == 6) então
+	dia = "Sexta"
+senão
+	dia = "Sábado"
+escrever("O dia da semana é ", dia)
+fim
+
+//16
+inicio
+escrever("Introduza o nome: " )
+ler(nome)
+escrever("Introduza o número de horas trabalhadas e Valor pago por hora: ")
+ler(horas)
+escrever("Introduza o valor pago por hora: ")
+ler(valor_hora)
+salario = (valor_hora * horas) * (1 - 0.25)
+escrever("O trabalhador ", nome, "recebe de salário líquido: ", salario)
+fim
+
+//17
+inico
+escrever("Introduza um valor x: ")
+ler(valor)
+resultado = valor -2
+se resultado < 0 então
+	resultado = -1 * resultado
+escrever("O resultado de |x-2| é: ", resultado)
+fim
+
+//18
+inicio
+escrever("Introduza o valor do artigo:" )
+ler(valor)
+se (valor > 5 and valor <= 25) então
+	desconto = 0.05
+senão se (valor > 25 and valor <= 50)  então
+	desconto = 0.10
+senão se (valor > 50 and valor <= 75)  então
+	desconto = 0.15
+senão se (valor > 75)  então
+	desconto = 0.30
+senão
+	desconto = 0.00
+preco_saldo = valor * (1 - desconto)
+escrever("O preço de saldo do artigo é: ", preco_saldo)
+fim
+
+//19
+inicio
+escrever("Introduza do valor de A e de B: ")
+ler(val_a)
+ler(val_b)
+val_a1 = val_a
+val_b1 = val_b
+val_a = val_b1
+val_b = val_a1
+escrever("O novo valor de A é: ", val_a, " e o novo valor de B é: ", val_b)
+fim
+
+//20
+inicio
+escrever("Introduza do valor de A e de B: ")
+ler(val_a)
+ler(val_b)
+se val_a > val_b então
+	escrever(val_a)
+senão
+	escrever(val_b)
+fim
+
+//21
+inicio
+escrever("Introduza 2 valores inteiros: ")
+ler(int1)
+ler(int2)
+se (int1 > int2) então
+	quociente = int1 / int2
+	resto = int1 % int2
+	escrever("O quociente de int1 por int2 é ", quociente, " e o resto da divisão inteira é ", resto)
+fim
+
+//22
+inicio
+escrever("Introduza um número: ")
+ler(N)
+se (N <= 10) então
+	escrever("F1")
+senão se (N > 10 and N <= 100) então
+	escrever("F2")
+senão
+	escrever("F3")
+fim
+
+//23
+inicio
+escrever("Introduza 3 números inteiros: "
+ler(a, b, c)
+se (a > b and b > c) então
+	escrever(a, b, c)
+senão se (a > c and c > b) então
+	escrever(a, c, b)
+senão se(b > a and a > c) então
+	escrever(b, a, c)
+senão se (b > c and c > a) então
+	escrever(b, c, a)
+senão se (c > a and a > b) então
+	escrever(c, a, b)
+senão //(c > b and b > a)
+	escrever(c, b, a)
+fim
+
+//24
+inicio
+escrever("Qual o seu ano de nascimento? ")
+ler(data)
+dias = (2020 - data) * 12 * 30
+escrever("Já viveu ", dias, " dias.") 
+fim
+
+//25
+inicio
+escrever("Introduza os valores A, B e C: ")
+ler(A, B, C)
+se (A + B > C) então
+	escrever("A soma de ", A, " com ", B, "é maior que ", C)
+senão se (A + B < C) então
+	escrever("A soma de ", A, " com ", B, "é menor que ", C)
+senão
+	escrever("A soma de ", A, " com ", B, "é igual a ", C)
+fim
+
+//26
+inicio
+escrever("Introduza 3 números inteiros: "
+ler(a, b, c)
+se (a < b and a < c) então
+	escrever(a)
+senão se (b < a and b < c) então
+	escrever(b)
+senão
+	escrever(c)
+fim
+
+//27
+inicio
+escrever("Introduza o nome do cliente: ")
+ler(nome)
+escrever("Introduza a quantidade de parafusos, porcas e anilhas comprados: ")
+ler(q_parafusos, q_porcas, q_anilhas)
+c_parafusos = 0.20
+c_porcas = 0.10
+c_anilhas = 0.05
+total_desconto = q_parafusos * c_parafusos * 0.20 + q_porcas * c_porcas * 0.10 + q_anilhas * c_anilhas * 0.30
+total_pagar = q_parafusos * c_parafusos + q_porcas * c_porcas + q_anilhas * c_anilhas - total_desconto
+escrever("O cliente ", nome, " comprou as seguintes peças:)
+escrever("Parafusos: ", q_parafusos)
+escrever("Porcas: ", q_porcas)
+escrever("Anilhas: ", q_anilhas)
+escrever("A compra tem um desconto total de: ", total_desconto)
+escrever("O total a pagar é: ", total_pagar)
+fim
+
+//28
+inicio
+escrever("Indique o número de conta: ")
+ler(conta_numero)
+escrever("Indique a operação que pretende efectuar: 1. Crédito 2. Débito: ")
+ler(operacao)
+escrever("Qual o valor que pretende: ")
+ler(valor)
+ler(saldo)
+se operacao == 1 então
+	saldo = saldo + valor
+senão
+	saldo = saldo - valor
+escrever("O seu saldo é: ", saldo)
+se saldo < 0 então
+	escrever("Conta bloqueada. Saldo negativo.")
+fim
+
+
+
+//29
+inicio
+escrever("Introduza o nome do aluno e as suas 3 notas: ")
+ler(nome, nota1, nota2, nota3)
+media = (nota1 + nota2 + nota3) / 3
+se (media >= 10) então
+	estado = "APROVADO"
+senão
+	estado = "REPROVADO"
+escrever("O aluno ", nome, " teve as seguintes notas: ", nota1, ", ",nota2, " e ", nota3)
+escrever("A sua média foi de: ", media)
+escrever("O aluno está ", estado)
+fim
+
+//30
+inicio
+escrever("Introduza o nome do aluno e a sua nota: ")
+ler(nome, nota)
+se (nota <= 49) então
+	classificacao = "Insuficiente"
+senão se (nota >= 50 and nota <= 64) então
+	classificacao = "Suficiente"
+senão se (nota >= 65 and nota <= 84) então
+	classificacao = "Bom"
+senão
+	classificacao = "Excelente"
+escrever("A classificação do aluno ", nome, "foi: ", classificacao)
+fim
+
+//31
+inicio
+escrever("Insira o comprimento de cada um dos 3 lados triângulo: ")
+ler(lado1, lado2, lado3)
+se (lado1 == lado2 and lado2 == lado3) então
+	escrever("É um triângulo Equilátero.")
+senão se (lado1 == lado2 or lado1 == lado3 or lado2 == lado3) então
+	escrever("É um triângulo Isósceles.")
+senão // todos os lados são diferentes
+	escrever("É um triângulo Escaleno.")
+fim
+
+
+//32
+inicio
+escrever(Insira os 3 ângulos do triângulo: )
+ler(ang1, ang2, ang3)
+se (ang1 == 90 or ang2 == 90 or ang 3 == 90) então
+	escrever("É um triângulo rectângulo.")
+senão se (ang1 > 90 or ang2 > 90 or ang 3 > 90) então
+	escrever("É um triângulo obtusângulo.")
+senão // todos os ângulos menores que 90
+	escrever("É um triângulo acutângulo.")
+fim

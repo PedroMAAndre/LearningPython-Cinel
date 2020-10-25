@@ -1,0 +1,31 @@
+É-nos dado o preço de um terreno de forma retangular, bem como
+as medidas de dois lados adjacentes. Pretendemos saber se o seu
+preço por metro quadrado está acima ou abaixo da média dos
+preços praticados na zona, sendo-nos também dado esse valor.
+---------------------------------------------------------------
+
+inicio
+
+escrever("Bem-vindo. Insira o valor total do terreno: ")
+ler(valor_total)
+escrever("Insira a medida do lado 1 do terreno: ")
+ler(lado1)
+escrever("Insira a medida do lado 2 do terreno: ")
+ler(lado2)
+escrever("Insira o preço médio praticado por m2 na zona: ")
+ler(preco_zona)
+
+area = lado1 * lado2
+pvenda_m2 = valor_total / area
+
+se(pvenda_m2 > preco_zona) então
+	escrever("Valor de venda acima da média...")
+
+senão se(pvenda_m2 < preco_zona) então
+	escrever("Valor de venda abaixo da média...")
+
+senão
+	escrever("Valor de venda é igual ao valor médio...")
+	
+	
+fim

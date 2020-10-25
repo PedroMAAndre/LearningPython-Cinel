@@ -1,0 +1,26 @@
+Ler a idade de uma pessoa e determinar:
+	> 0 a 2 	- bebé
+	> 3 a 12 	- criança
+	> 13 a 17 	- adolescente
+	> >= 18		- adulto
+E garantir que a idade é 0 ou positiva.
+
+inicio
+escrever("Introduza a idade da pessoa: ")
+ler(idade)
+
+enquanto (idade < 0) faz
+	escrever("A idade introduzida não é válida.")
+	escrever("Introduza a idade da pessoa: ")
+	ler(idade)
+
+se (idade < 3) então
+	escrever("É um bebé")
+senão se (idade < 13) então
+	escrever("É uma criança")
+senão se (idade < 18) então
+	escrever("É um adolescente")
+senão:
+	escrever("É um adulto")
+
+fim
